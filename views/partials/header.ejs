@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Items</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="static/items.css" title="style" />
+
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/221ec53e39.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <div class="spinner-wrapper">
+        <div class="sk-chase">
+            <div class="sk-chase-dot"></div>
+            <div class="sk-chase-dot"></div>
+            <div class="sk-chase-dot"></div>
+            <div class="sk-chase-dot"></div>
+            <div class="sk-chase-dot"></div>
+            <div class="sk-chase-dot"></div>
+        </div>
+    </div>
+
+    <!-- <div class="navigation">
+        <img src="https://media.discordapp.net/attachments/910769474775416872/911681537899130950/York_fresh.jpeg" alt="icon" id="i_con">
+        <a href="/" class="s"><b>Home</b></a>
+        <a href="/items" class="s"><b>Grocery</b></a>
+        <a href="#section2" class="s"><b>About</b></a>
+
+    </div> -->
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light ">
+        <a class="navbar-brand" href="/"><img src="https://media.discordapp.net/attachments/910769474775416872/911681537899130950/York_fresh.jpeg" alt="icon" id="i_con"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link s" href="/">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link s" href="/items">Grocery</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link s mr-sm-2" href="#section2">About</a>
+                </li>
+                <% if (!isLoggedIn) { %>
+                <li class="nav-item">
+                    <a class="nav-link s mr-sm-2" href="login">Login</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link s mr-sm-2" href="register">Register</a>
+                </li>
+
+                <% } else { %>
+                <li class="nav-item">
+                    <a class="nav-link s mr-sm-2" href="logout">Logout</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link s mr-sm-2" href="/shopping-cart">
+                        <i class="fas fa-shopping-cart"></i>Shopping cart<span class="badge bg-light text-dark"><%= session.cart.totalQty %></span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link s mr-sm-2" href="account">Account</a>
+                </li>
+                <% } %>
+
+
+            </ul>
+        </div>
+    </nav>

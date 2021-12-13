@@ -1,0 +1,30 @@
+<%- include("partials/header", {isLoggedIn: isLoggedIn}) %>
+
+<header class="main-header">
+  <h1>Fresh and affordable <span>Groceries</span></h1>
+
+  <h3>"Made by Students for Students"</h3>
+</header>
+<div class="food-list">
+  <main class="container">
+    <% products.forEach((item) => { %>
+      <span class="item-thumbnail">
+        <figure>
+          <img src=<%= item.imagePath%> alt="my img" />
+          <figcaption class="item"> <%= item.title%> </figcaption>
+
+          <figcaption class="price"> <%= item.price%> </figcaption>
+        </figure>
+        <!-- <img src="https://assets.shop.loblaws.ca/products/20175355001/b1/en/front/20175355001_front_a01_@2.png" alt="icon" id="i_con">
+          <p>Bananas, Bunch</p> -->
+        <br>
+        <a class="home-button" style="vertical-align:middle" href="/add-to-cart/<%=item.id%>"><span>ADD</span></a>
+      </span>
+    <% }) %>
+
+  </main>
+
+</div>
+
+
+<%- include('partials/footer') %>
